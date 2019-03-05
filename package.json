@@ -1,0 +1,19 @@
+{
+  "name": "gridsome-starter-site",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "gridsome": "^0.5.0"
+  },
+  "devDependencies": {
+    "@gridsome/plugin-sitemap": "^0.1.0",
+    "@gridsome/source-filesystem": "^0.3.0",
+    "@gridsome/transformer-remark": "^0.2.1",
+    "gridsome-plugin-purgecss": "^1.0.10",
+    "gridsome-plugin-tailwindcss": "^1.0.6"
+  }
+}

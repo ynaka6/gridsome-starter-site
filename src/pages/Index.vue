@@ -1,0 +1,68 @@
+<template>
+  <Layout>
+    <div class="container mx-auto p-10 flex justify-center">
+      <div class="max-w-lg">
+
+        <div
+          class="w-full lg:flex"
+          v-for="{ node } in $page.allBlogPost.edges"
+          :key="node._id"
+        >
+          <div class="border border-grey-light bg-white rounded p-4 flex flex-col justify-between leading-normal">
+            <p class="my-1 text-sm text-grey-darker">
+                <span class="text-grey-darker text-sm">
+                    {{ node.createdAt }}
+                    <svg class="h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" fill="currentColor"><path d="M1639 1056q0 5-1 7-64 268-268 434.5t-478 166.5q-146 0-282.5-55t-243.5-157l-129 129q-19 19-45 19t-45-19-19-45v-448q0-26 19-45t45-19h448q26 0 45 19t19 45-19 45l-137 137q71 66 161 102t187 36q134 0 250-65t186-179q11-17 53-117 8-23 30-23h192q13 0 22.5 9.5t9.5 22.5zm25-800v448q0 26-19 45t-45 19h-448q-26 0-45-19t-19-45 19-45l138-138q-148-137-349-137-134 0-250 65t-186 179q-11 17-53 117-8 23-30 23h-199q-13 0-22.5-9.5t-9.5-22.5v-7q65-268 270-434.5t480-166.5q146 0 284 55.5t245 156.5l130-129q19-19 45-19t45 19 19 45z"></path></svg>
+                    {{ node.updatedAt }}
+                </span>
+            </p>
+            <router-link
+              :to="node.path"
+              class="no-underline text-black font-bold text-xl py-1"
+            >
+              <h3 v-html="node.title"/>
+            </router-link>
+            <p class="text-grey-darker text-base mb-2"
+              v-html="node.description"
+            />
+            <div class="my-1">
+                <span
+                    class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2"
+                    v-for="tag in node.tags.split(' ')"
+                    :key="tag"
+                    v-text="`#${tag}`"
+                />
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </Layout>
+</template>
+
+<script>
+export default {
+  metaInfo: {
+    title: 'Home'
+  }
+}
+</script>
+
+<page-query>
+  query Home ($page: Int) {
+    allBlogPost (page: $page) {
+      edges {
+        node {
+          _id
+          title
+          createdAt (format: "YYYY.MM.D")
+          updatedAt (format: "YYYY.MM.D")
+          description
+          path
+          tags
+        }
+      }
+    }
+  }
+</page-query>
