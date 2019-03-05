@@ -1,14 +1,25 @@
 <template>
   <Layout>
-    <h1>About us</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error doloremque omnis animi, eligendi magni a voluptatum, vitae, consequuntur rerum illum odit fugit assumenda rem dolores inventore iste reprehenderit maxime! Iusto.</p>
+    <div class="container mx-auto p-10 flex justify-center">
+      <div class="max-w-lg">
+
+        <h1 class="py-1 text-center">About</h1>
+        <p class="text-grey-darken text-center text-xs">本サイトについて</p>
+        <p class="mt-4">
+          Gridsome入門として構築したデモサイトです。mdファイルを利用したブログ投稿やTailwind CSSを利用したUI構築を行なっています。<br>
+          Gridsomeを利用してWebサイトやブログを構築したい初学者をターゲットにしています。
+        </p>
+
+      </div>
+    </div>
+
   </Layout>
 </template>
 
 <script>
 export default {
   metaInfo: {
-    title: 'About us'
+    title: 'About'
   }
 }
 </script>

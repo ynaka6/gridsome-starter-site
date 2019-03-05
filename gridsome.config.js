@@ -10,8 +10,9 @@ class TailwindExtractor {
   }
 }
 
+
 module.exports = {
-  siteName: 'Gridsome',
+  siteName: 'Gridsome Starter',
   siteUrl: 'https://gridsome-starter-site.netlify.com',
   plugins: [
     {
@@ -45,7 +46,7 @@ module.exports = {
       use: '@gridsome/plugin-sitemap',
       options: {
         cacheTime: 600000,
-        exclude: ['/exclude-me'],
+        exclude: [],
         config: {
           '/blog/*': {
             changefreq: 'weekly',
