@@ -5,7 +5,7 @@
       <div class="w-full max-w-screen-xl relative mx-auto px-6">
         <div class="flex items-center justify-between flex-wrap">
           <div class="flex items-center flex-no-shrink text-blue mr-6">
-              <g-link to="/" class="logo text-xl lg:text-2xl">{{ $static.metaData.siteName }}</g-link>
+              <g-link to="/" class="logo text-grey-darkest text-xl lg:text-2xl">{{ $static.metaData.siteName }}</g-link>
           </div>
           <div class="w-full hidden lg:block flex-grow lg:flex lg:items-center lg:w-auto">
             <div class="text-sm lg:flex-grow">
@@ -41,14 +41,14 @@
     </div>
 
     <footer>    
-      <section class="bg-teal py-8 w-full">
+      <section class="bg-teal-dark py-8 w-full">
         <div class="container mx-auto px-8">
           <div class="flex flex-col lg:flex-row">
             <div class="lg:w-2/3 py-4 lg:p-4 text-white">
               <h2 class="py-2">
                 <g-link
                   to="/"
-                  class="text-white no-underline"
+                  class="logo text-white no-underline"
                 >
                   {{ $static.metaData.siteName }}
                 </g-link>
@@ -59,18 +59,18 @@
             </div>
             <div class="lg:w-1/3 py-4 lg:p-4">
               <div class="">
-                <p class="text-white text-sm mb-6">
-                  Sites
+                <p class="text-white text-md mb-6">
+                  Site Links
                 </p>
-                <ul class="list-reset text-xs mb-6">
-                  <li class="mr-2 inline-block">
-                    <g-link class="text-white hover:text-grey-light" to="/">Home</g-link>
+                <ul class="list-reset text-sm mb-6">
+                  <li class="mr-3 inline-block">
+                    <g-link class="text-white hover:text-grey-light no-underline" to="/">Home</g-link>
                   </li>
-                  <li class="mr-2 inline-block">
-                    <g-link class="text-white hover:text-grey-light" to="/about">About</g-link>
+                  <li class="mr-3 inline-block">
+                    <g-link class="text-white hover:text-grey-light no-underline" to="/about">About</g-link>
                   </li>
-                  <li class="mr-2 inline-block">
-                    <g-link class="text-white hover:text-grey-light" to="/term">Term</g-link>
+                  <li class="mr-3 inline-block">
+                    <g-link class="text-white hover:text-grey-light no-underline" to="/term">Term</g-link>
                   </li>
                 </ul>
               </div>
@@ -129,19 +129,35 @@ query {
 <style scoped>
 .logo {
   font-family: 'Bree Serif', serif;
-  @apply text-grey-darkest no-underline;
+  @apply no-underline;
 }
 .logo:hover {
   @apply text-grey;
 }
 
 .header-menu-link {
-  @apply inline-block mr-3 mt-1 no-underline text-grey-darkest;
+  @apply inline-block mr-3 mt-1 no-underline text-grey-darkest relative;
+}
+.header-menu-link:after {
+  content: '';
+  width: 0;
+  height: 3px;
+  display: block;
+  bottom: -12px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: 0.3s ease-in-out;
+  border-radius: 1.5px;
+  @apply absolute bg-teal-dark;
 }
 .header-menu-link:hover {
   @apply text-grey;
 }
 .header-menu-link.active--exact {
   @apply font-semibold;
+}
+.header-menu-link:hover:after, .header-menu-link.active--exact:after {
+  width: 40px;
 }
 </style>

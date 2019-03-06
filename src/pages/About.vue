@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <div class="container mx-auto p-10 flex justify-center">
+    <div class="container mx-auto px-2 p-5 md:p-10 flex justify-center">
       <div class="max-w-lg">
 
         <h1 class="py-1 text-center">About</h1>
