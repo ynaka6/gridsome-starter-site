@@ -14,6 +14,7 @@ class TailwindExtractor {
 module.exports = {
   siteName: 'Gridsome Starter',
   siteUrl: 'https://gridsome-starter-site.netlify.com',
+  siteDescription: 'Gridsome入門として構築したデモサイトです。mdファイルを利用したブログ投稿やTailwind CSSを利用したUI構築を行なっています。',
   plugins: [
     {
       use: 'gridsome-plugin-tailwindcss',
