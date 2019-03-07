@@ -40,7 +40,12 @@ module.exports = {
       options: {
         path: 'blog/*.md',
         typeName: 'BlogPost',
-        route: '/blog/:slug'
+        route: '/blog/:slug',
+        remark: {
+          plugins: [
+            '@gridsome/remark-prismjs'
+          ]
+        }
       }
     },
     {
