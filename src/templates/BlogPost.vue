@@ -20,7 +20,7 @@
                         v-text="`#${tag}`"
                     />
                 </div>
-                <g-image class="mt-5" :src="$page.blogPost.image"/>
+                <g-image class="mt-5" :src="$page.blogPost.image" :alt="$page.blogPost.title" />
             </div>
             <div class="px-6 py-4 content" v-html="$page.blogPost.content" />
         </div>
