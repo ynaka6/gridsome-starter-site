@@ -29,10 +29,11 @@ module.exports = {
             './src/**/*.vue',
             './src/**/*.js',
             './src/**/*.jsx',
-            './src/**/*.md'
-          ],
-          extractor: TailwindExtractor,
-          extensions: ['vue', 'js', 'jsx', 'md']
+            './src/**/*.md',
+            'node_modules/prismjs/**/*.js'
+        ],
+        extractor: TailwindExtractor,
+        extensions: ['vue', 'js', 'jsx', 'md']
       }
     },
     {
