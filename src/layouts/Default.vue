@@ -10,6 +10,7 @@
           <div class="w-full hidden lg:block flex-grow lg:flex lg:items-center lg:w-auto">
             <div class="text-sm lg:flex-grow">
               <g-link class="header-menu-link" to="/">Home</g-link>
+              <g-link class="header-menu-link" to="/blog">Blog</g-link>
               <g-link class="header-menu-link" to="/about">About</g-link>
               <g-link class="header-menu-link" to="/term">Term</g-link>
             </div>
@@ -67,6 +68,9 @@
                 <ul class="list-reset text-sm mb-6">
                   <li class="mr-3 inline-block">
                     <g-link class="text-white hover:text-grey-light no-underline" to="/">Home</g-link>
+                  </li>
+                  <li class="mr-3 inline-block">
+                    <g-link class="text-white hover:text-grey-light no-underline" to="/blog">Blog</g-link>
                   </li>
                   <li class="mr-3 inline-block">
                     <g-link class="text-white hover:text-grey-light no-underline" to="/about">About</g-link>

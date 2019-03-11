@@ -1,7 +1,11 @@
 <template>
   <Layout>
-    <div class="container mx-auto px-2 p-5 md:p-10 flex justify-center">
-      <div class="flex flex-wrap">
+    <div class="container mx-auto px-2 p-5 md:p-10 flex flex-col justify-center">
+      <div class="text-center">
+        <h1 class="py-1 text-center">Newly Post</h1>
+        <p class="text-grey-darken text-center text-xs">最新投稿</p>
+      </div>
+      <div class="flex flex-wrap justify-center">
 
         <div
           class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3"
