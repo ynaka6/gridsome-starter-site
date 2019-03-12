@@ -13,6 +13,7 @@
               <g-link class="header-menu-link" to="/blog">Blog</g-link>
               <g-link class="header-menu-link" to="/about">About</g-link>
               <g-link class="header-menu-link" to="/term">Term</g-link>
+              <g-link class="header-menu-link" to="/contact">Contact</g-link>
             </div>
           </div>
           <div class="flex justify-start items-center">
@@ -77,6 +78,9 @@
                   </li>
                   <li class="mr-3 inline-block">
                     <g-link class="text-white hover:text-grey-light no-underline" to="/term">Term</g-link>
+                  </li>
+                  <li class="mr-3 inline-block">
+                    <g-link class="text-white hover:text-grey-light no-underline" to="/contact">Contact</g-link>
                   </li>
                 </ul>
               </div>
