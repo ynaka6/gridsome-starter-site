@@ -62,15 +62,15 @@
                 <div class="inline-flex">
                     <g-link
                         class="no-underline bg-grey-light hover:bg-grey text-grey-darkest font-bold py-2 px-4 rounded-l"
-                        :class="{ 'cursor-not-allowed pointer-events-none opacity-50': $page.allBlogPost.pageInfo.currentPage <= 1 }"
-                        :to="`/blog/${$page.allBlogPost.pageInfo.currentPage - 1}`"
+                        :class="{ 'cursor-not-allowed pointer-events-none opacity-50': prev < 1 }"
+                        :to="prevPage"
                     >
                         前のページ
                     </g-link>
                     <g-link
                         class="no-underline bg-grey-light hover:bg-grey text-grey-darkest font-bold py-2 px-4 rounded-r"
-                        :class="{ 'cursor-not-allowed pointer-events-none opacity-50': $page.allBlogPost.pageInfo.totalPages <= $page.allBlogPost.pageInfo.currentPage }"
-                        :to="`/blog/${$page.allBlogPost.pageInfo.currentPage + 1}`"
+                        :class="{ 'cursor-not-allowed pointer-events-none opacity-50': $page.allBlogPost.pageInfo.totalPages < next }"
+                        :to="nextPage"
                     >
                         次のページ
                     </g-link>
@@ -84,7 +84,31 @@
 export default {
   metaInfo: {
     title: 'Blog'
-  }
+  },
+  computed: {
+    prev () {
+        return this.$page.allBlogPost.pageInfo.currentPage - 1
+    },
+    next () {
+        return this.$page.allBlogPost.pageInfo.currentPage + 1
+    },
+    prevPage() {
+        const prev = this.$page.allBlogPost.pageInfo.currentPage - 1
+        if (prev <= 1) {
+            return '/blog'
+        }
+
+        return `/blog/${prev}`
+    },
+    nextPage() {
+        const next = this.$page.allBlogPost.pageInfo.currentPage + 1
+        if (next > this.$page.allBlogPost.pageInfo.totalPages) {
+            return `/blog/${this.$page.allBlogPost.pageInfo.totalPages - 1}`
+        }
+
+        return `/blog/${next}`
+    }
+  },
 }
 </script>
 
