@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <div class="container mx-auto px-2 p-5 md:p-10 flex justify-center">
+    <div class="container mx-auto sm:py-10 flex justify-center">
       <div class="max-w-lg">
 
         <h1 class="py-1 text-center">Contact</h1>
@@ -11,10 +11,10 @@
           action="https://getform.io/f/4ecadf57-24d6-4b01-ac36-c9069712a91e"
           method="POST"
           enctype="multipart/form-data"
-          class="bg-white border shadow-md rounded px-8 pt-6 pb-8 mt-10 mb-4"
+          class="bg-white border shadow-md rounded lg:px-8 pt-6 pb-8 mt-10 mb-4"
           @submit="submit"
         >
-          <div class="flex flex-wrap -mx-3 mb-6">
+          <div class="flex flex-wrap mx-3 mb-6">
             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
               <label
                 class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
@@ -62,7 +62,7 @@
             </div>
           </div>
 
-          <div class="flex flex-wrap -mx-3 mb-6">
+          <div class="flex flex-wrap mx-3 mb-6">
             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
               <label
                 class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
@@ -88,10 +88,11 @@
                 id="file"
                 type="file"
                 name="file"
+                class="w-full"
               >
             </div>
           </div>
-          <div class="mb-6">
+          <div class="mx-3 mb-6 px-3">
             <label
               class="block text-grey-darker text-sm font-bold mb-2"
               for="content">
