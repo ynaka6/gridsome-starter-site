@@ -24,7 +24,11 @@
           </div>
           <div class="px-6 py-4 content" v-html="$page.blogPost.content" />
           <div class="px-6 py-4">
-            <div class="just-comments" :data-apikey="just_comments_apy_key"></div>
+            <div
+              class="just-comments"
+              data-disablesociallogin="true"
+              :data-apikey="just_comments_apy_key"
+            ></div>
           </div>
       </div>
     </div>
