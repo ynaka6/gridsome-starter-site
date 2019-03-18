@@ -26,7 +26,7 @@
           <div class="px-6 py-4">
             <div
               class="just-comments"
-              data-disablesociallogin="true"
+              :data-pageid="$page.blogPost.slug"
               :data-apikey="just_comments_apy_key"
             ></div>
           </div>
@@ -45,9 +45,9 @@ export default {
       ],
     }
   },
-  data: {
+  data:() => ({
     just_comments_apy_key: process.env.GRIDSOME_JUST_COMMENTS_APY_KEY
-  },
+  }),
   computed: {
     tags () {
       return this.$page.blogPost.tags.split(' ');
@@ -69,6 +69,7 @@ export default {
       content
       image
       tags
+      slug
     }
   }
 </page-query>
