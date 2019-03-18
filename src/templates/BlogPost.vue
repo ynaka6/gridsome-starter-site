@@ -26,6 +26,7 @@
           <div class="px-6 py-4">
             <div
               class="just-comments"
+              data-locale="ja"
               :data-pageid="$page.blogPost.slug"
               :data-apikey="just_comments_apy_key"
             ></div>
