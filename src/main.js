@@ -17,4 +17,10 @@ export default function (Vue, { router, head, isClient }) {
     rel: 'stylesheet',
     href: 'https://fonts.googleapis.com/css?family=Bree+Serif'
   })
+  head.script.push({
+    type: 'text/javascript',
+    src: '//userlike-cdn-widgets.s3-eu-west-1.amazonaws.com/5a66044befa757b2102ef2514520cd2025a9674c2f0522b62ff5e2e2eb29d528.js',
+    async: true,
+  })
 }
+
