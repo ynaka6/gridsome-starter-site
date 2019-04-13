@@ -119,6 +119,10 @@
           <div class="w-full text-xs sm:text-sm text-center">
             Copyright © 2018 @nnn All Rights Reserved.
           </div>
+          <div class="flex items-center justify-center text-xs text-center mt-4">
+            made with Gridsome
+            <g-image class="ml-1 w-5" src="../favicon.png" alt="Gridsome" />
+          </div>
         </div>
       </section>
     </footer>
